@@ -3,8 +3,6 @@ A containerized CI/CD pipeline for a Netflix clone application, built with Jenki
 
 ## Overview
 
-## Overview
-
 The previous CI/CD project used Jenkins, SonarQube, and Nexus on EC2, with the app served directly by an nginx server. This version keeps Jenkins and SonarQube as native installs for build orchestration and code quality analysis, but replaces the nginx deployment layer entirely with Docker, AWS ECR, and AWS ECS:
 
 - The application is containerized with **Docker**
