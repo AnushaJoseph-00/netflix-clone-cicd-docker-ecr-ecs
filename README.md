@@ -10,3 +10,4 @@ The previous CI/CD project used Jenkins, SonarQube, and Nexus on EC2, with the a
 - The container is deployed and run via **AWS ECS (Fargate)**, behind an **Application Load Balancer**
 
 ## Architecture
+![Architecture diagram](./CI_CD-ECS.jpeg)
