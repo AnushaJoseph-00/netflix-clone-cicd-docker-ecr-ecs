@@ -58,7 +58,7 @@ This pipeline follows patterns used in actual engineering teams, not just a tuto
 ![ECR repository](./ECR_Repo.jpg)
 
 **ECS service running and healthy**
-![ECS service health](./AWS_ECS.jpeg)
+![ECS service health](./AWS_ECS.jpg)
 
 **Live application**
 ![Netflix clone running](./Netflix.jpg)
