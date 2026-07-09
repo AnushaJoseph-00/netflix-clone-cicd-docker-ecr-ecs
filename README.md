@@ -24,7 +24,7 @@ The previous CI/CD project used Jenkins, SonarQube, and Nexus on EC2, with the a
 
 - One deliberate design choice: Jenkins' pipeline stops once the image is published to ECR. I chose to deploy that image to ECS manually rather than automating it, so I could understand each step of the deployment process hands-on before automating it.
 
-## Why this mirrors real-world DevOps practice
+## How this mirrors real-world DevOps practice
 
 This pipeline follows patterns used in actual engineering teams, not just a tutorial setup:
 
