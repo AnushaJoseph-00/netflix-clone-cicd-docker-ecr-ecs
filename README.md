@@ -94,4 +94,4 @@ Then visit `http://localhost:8080`.
 
 ## Related Project
 
-- [Netflix-CI-CD-Pipeline](https://github.com/AnushaJoseph-00/Netflix-CI-CD-Pipeline) — the original native-install version of this pipeline (Jenkins, SonarQube, Nexus, nginx, all on EC2)
+- [Netflix-CI-CD-Pipeline](https://github.com/AnushaJoseph-00/netflix-cicd-pipeline) — the original native-install version of this pipeline (Jenkins, SonarQube, Nexus, nginx, all on EC2)
