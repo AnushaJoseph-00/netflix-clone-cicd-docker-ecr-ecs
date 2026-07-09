@@ -49,7 +49,7 @@ This pipeline follows patterns used in actual engineering teams, not just a tuto
 ![EC2 service](./AWS_EC2_Instances.jpg)
 
 **Full pipeline run - all stages passing**
-![SonarQube dashboard](./Jenkins_Pipeline_Stages.jpeg)
+![Pipeline](./Jenkins_Pipeline_Stages.jpeg)
 
 **SonarQube code quality analysis**
 ![SonarQube dashboard](./SonarQube.jpeg)
