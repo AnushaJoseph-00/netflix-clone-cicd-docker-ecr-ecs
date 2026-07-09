@@ -42,6 +42,26 @@ This pipeline follows patterns used in actual engineering teams, not just a tuto
 5. **Quality Gate** - pipeline waits for SonarQube's pass/fail verdict via webhook
 6. **Build App Image** - multi-stage Docker build (Node build stage → nginx serve stage), with the TMDB API key injected via build argument
 
+## Local Development
+
+```bash
+git clone https://github.com/AnushaJoseph-00/netflix-clone-cicd-docker-ecr.git
+cd netflix-clone-cicd-docker-ecr
+npm install
+npm start
+```
+
+Create a `.env` file based on `.env.example` with your own TMDB v3 API key:
+
+## Building the Docker Image Locally
+
+```bash
+docker build --build-arg REACT_APP_TMDB_KEY=your_key_here -t netflix-clone:local .
+docker run -p 8080:80 netflix-clone:local
+```
+
+Then visit `http://localhost:8080`.
+
    
 ## Screenshots
 
@@ -62,3 +82,16 @@ This pipeline follows patterns used in actual engineering teams, not just a tuto
 
 **Live application**
 ![Netflix clone running](./Netflix.jpg)
+
+
+## Next Steps / Future Improvements
+
+- **Infrastructure as Code** - recreate the AWS infrastructure (EC2 instances, ECS cluster, ALB, security groups) using Terraform instead of manual console setup, enabling one-command provisioning and teardown
+- **Kubernetes** - deploy the same containerized app to a Kubernetes cluster (EKS) as an alternative to ECS, for broader orchestration experience beyond AWS-specific tooling
+- **Automated deployment triggers** - add a GitHub webhook so Jenkins builds automatically on every push, and reintroduce an automated ECS deployment stage to close the gap between CI and full CD
+- **Monitoring and observability** - add Prometheus and Grafana to monitor the running ECS service, rather than relying on manually checking the AWS console
+- **Secrets management** - move the TMDB API key and other secrets out of Jenkins credentials and Docker build arguments into AWS Secrets Manager, injected at runtime
+
+## Related Project
+
+- [Netflix-CI-CD-Pipeline](https://github.com/AnushaJoseph-00/Netflix-CI-CD-Pipeline) — the original native-install version of this pipeline (Jenkins, SonarQube, Nexus, nginx, all on EC2)
