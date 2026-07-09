@@ -48,7 +48,7 @@ This pipeline follows patterns used in actual engineering teams, not just a tuto
 **AWS EC2 service running**
 ![EC2 service](./AWS_EC2_Instances.jpg)
 
-**Full pipeline run — all stages passing**
+**Full pipeline run - all stages passing**
 ![Pipeline stages](./CI_CD-ECS.jpeg)
 
 **SonarQube code quality analysis**
